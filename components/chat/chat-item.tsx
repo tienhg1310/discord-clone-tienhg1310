@@ -65,7 +65,6 @@ export const ChatItem = ({
     if (member.id === currentMember.id) {
       return;
     }
-
     router.push(`/servers/${params?.serverId}/conversations/${member.id}`);
   };
 
