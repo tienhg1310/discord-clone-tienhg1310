@@ -4,7 +4,7 @@ import { classNames } from "uploadthing/client";
 
 interface UserAvatarProps{
     src?: string;
-    className: string;
+    className?: string;
 }
 
 
