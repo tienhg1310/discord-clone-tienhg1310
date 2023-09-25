@@ -41,14 +41,12 @@ const MediaRoom = ({ chatId, video, audio }: MediaRoomProps) => {
   }
   return (
     <LiveKitRoom
-      video={true}
-      audio={true}
-      token={token}
-      connectOptions={{ autoSubscribe: false }}
-      serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_URL}
-      // Use the default LiveKit theme for nice styles.
       data-lk-theme="default"
-      style={{ height: "100dvh" }}
+      serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_URL}
+      token={token}
+      connect={true}
+      video={video}
+      audio={audio}
     >
       <VideoConference />
     </LiveKitRoom>
